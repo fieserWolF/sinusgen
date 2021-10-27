@@ -1,0 +1,12 @@
+{
+    "output": "sinus1",
+    "min": 0,
+    "max": 255,
+    "steps": 256,
+    "type" : 12,
+    "invert" : 0,
+    "offset" : 0,
+    "mod" : 0,
+    "show" : 1,
+    "comment" : "steps-values below 5 cause an error with some sinus-types"
+}
