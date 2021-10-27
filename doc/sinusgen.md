@@ -4,6 +4,7 @@ SinusGen generates and writes sinus data as bytes into a binary file. If values 
 As of now, this is a commandline-tool. This might change in the future.
 It runs on 64 bit versions of Linux, MacOS, Windows and other systems supported by Python. 
 
+![screenshot](./screenshot.png)
 
 # Why SinusGen?
 
