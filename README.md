@@ -18,7 +18,7 @@ eyecandy | optional graphical preview of the data
 # Usage
 
     sinusgen v2.32 [27.10.2021] *** by WolF
-    usage: sinusgen2.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
+    usage: sinusgen.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
                         [-type TYPE] [-invert] [-offset OFFSET] [-mod MODULO]
 
     This program writes sinus data as bytes into a binary file. If values are greater than 256, two files are written.
@@ -40,9 +40,9 @@ eyecandy | optional graphical preview of the data
     Note: All values of a config-file can be overwritten by commandline parameters.
 
     Examples:
-        ./sinusgen2.py -cfg sinus1.json --show
-        ./sinusgen2.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
-        ./sinusgen2.py -cfg sinus1.json -max 255 -type 10 --show
+        ./sinusgen.py -cfg sinus1.json --show
+        ./sinusgen.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
+        ./sinusgen.py -cfg sinus1.json -max 255 -type 10 --show
 
 
 
@@ -105,7 +105,7 @@ Have a good look in /doc.
 
 sinusgen comes in two flavors:
 
-- standalone executable for 64-bit systems Linux, MacOS/Darwin and Windows (see [releases](https://github.com/fieserWolF/sinusgen/releases))
+- standalone executable for 64-bit systems Linux, MacOS/Darwin will follow and Windows will follow (see [releases](https://github.com/fieserWolF/sinusgen/releases))
 - Python3 script
 
 ## Run the standalone executable

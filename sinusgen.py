@@ -2,7 +2,7 @@
 
 """
 sinusgen v2.32 [27.10.2021] *** by WolF
-usage: sinusgen2.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
+usage: sinusgen.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
                     [-type TYPE] [-invert] [-offset OFFSET] [-mod MODULO]
 
 This program writes sinus data as bytes into a binary file. If values are greater than 256, two files are written.
@@ -24,9 +24,9 @@ optional arguments:
 Note: All values of a config-file can be overwritten by commandline parameters.
 
 Examples:
-    ./sinusgen2.py -cfg sinus1.json --show
-    ./sinusgen2.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
-    ./sinusgen2.py -cfg sinus1.json -max 255 -type 10 --show
+    ./sinusgen.py -cfg sinus1.json --show
+    ./sinusgen.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
+    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 --show
 """
 
 import sys
@@ -92,7 +92,7 @@ user_offset    = 0
 user_type    = 0
 user_mod    = 0
 user_show    = False
-user_outname    = 'output.bin'
+user_outname    = 'output'
 
 
 
