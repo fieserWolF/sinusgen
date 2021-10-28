@@ -3,7 +3,7 @@
 ./sinusgen.py -cfg sinus1.json -show
 
 exit 0
-sinusgen v2.32 [27.10.2021] *** by WolF
+sinusgen v2.32 [27.10.2021] *** by fieserWolF
 usage: sinusgen.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
                     [-type TYPE] [-invert] [-offset OFFSET] [-mod MODULO]
 
@@ -26,9 +26,9 @@ optional arguments:
 Note: All values of a config-file can be overwritten by commandline parameters.
 
 Examples:
-    ./sinusgen.py -cfg sinus1.json --show
+    ./sinusgen.py -cfg sinus1.json -show
     ./sinusgen.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
-    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 --show
+    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 -show
 
 
 Available sinus types:

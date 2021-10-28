@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-sinusgen v2.32 [27.10.2021] *** by WolF
+sinusgen v2.32 [27.10.2021] *** by fieserWolF
 usage: sinusgen.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
                     [-type TYPE] [-invert] [-offset OFFSET] [-mod MODULO]
 
@@ -24,9 +24,9 @@ optional arguments:
 Note: All values of a config-file can be overwritten by commandline parameters.
 
 Examples:
-    ./sinusgen.py -cfg sinus1.json --show
+    ./sinusgen.py -cfg sinus1.json -show
     ./sinusgen.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
-    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 --show
+    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 -show
 """
 
 import sys
@@ -473,7 +473,7 @@ def _show_sinus_types() :
 
 
 def _main_procedure() :
-    print("%s v%s [%s] *** by WolF"% (PROGNAME, VERSION, DATUM))
+    print("%s v%s [%s] *** by fieserWolF"% (PROGNAME, VERSION, DATUM))
 
     #https://docs.python.org/3/library/argparse.html
     parser = argparse.ArgumentParser(
@@ -482,9 +482,9 @@ def _main_procedure() :
         epilog=''\
         'Note: All values of a config-file can be overwritten by commandline parameters.\n\n'\
         'Examples:\n'\
-        '    %s -cfg sinus1.json --show\n'\
+        '    %s -cfg sinus1.json -show\n'\
         '    %s -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8\n'\
-        '    %s -cfg sinus1.json -max 255 -type 10 --show\n' % (sys.argv[0],sys.argv[0],sys.argv[0])
+        '    %s -cfg sinus1.json -max 255 -type 10 -show\n' % (sys.argv[0],sys.argv[0],sys.argv[0])
     )
     
     parser.add_argument('-cfg', dest='config_file', help='configuration in .json format')
