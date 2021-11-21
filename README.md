@@ -132,7 +132,7 @@ You need to right-click or Control-click the app and select “Open”.
 
 ## Run the Python3 script directly
 
-Download _sinusgen.py_ and c64labels.json into the same folder on your computer.
+Download _sinusgen.py_ and, optionally as an example, _sinus1.json_ into the same folder on your computer.
 
     python3 sinusgen.py 
 
