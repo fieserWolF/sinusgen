@@ -1,34 +1,38 @@
 #!/bin/bash -e
 
-./sinusgen.py -cfg sinus1.json -show
+./sinusgen.py -cfg sinus1.json -show -previewfile output.png
 
 exit 0
-sinusgen v2.32 [27.10.2021] *** by fieserWolF
-usage: sinusgen.py [-h] [-cfg CONFIG_FILE] [-show] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE] [-max MAXIMUM_VALUE] [-steps STEPS]
-                    [-type TYPE] [-invert] [-offset OFFSET] [-mod MODULO]
+sinusgen v2.33 [01.02.2022] *** by WolF
+usage: sinusgen.py [-h] [-cfg CONFIG_FILE] [-show] [-previewfile PREVIEWFILE] [-list] [-output OUTPUT_FILE] [-min MINIMUM_VALUE]
+                   [-max MAXIMUM_VALUE] [-steps STEPS] [-type TYPE] [-invert] [-offset OFFSET] [-mod MODULO]
 
 This program writes sinus data as bytes into a binary file. If values are greater than 256, two files are written.
 
 optional arguments:
-  -h, --help           show this help message and exit
-  -cfg CONFIG_FILE     configuration in .json format
-  -show                show preview
-  -list                list all avaiable sinus types and exit
-  -output OUTPUT_FILE  name of binary output file without its suffix
-  -min MINIMUM_VALUE   minimum value (0-65535)
-  -max MAXIMUM_VALUE   maximum value (0-65535)
-  -steps STEPS         amount of bytes to generate, values below 5 cause an error with some sinus-types
-  -type TYPE           sinus type, see output of --list
-  -invert              invert values
-  -offset OFFSET       step offset, where to begin
-  -mod MODULO          modulo value
+  -h, --help            show this help message and exit
+  -cfg CONFIG_FILE      configuration in .json format
+  -show                 show preview
+  -previewfile PREVIEWFILE
+                        preview png filename
+  -list                 list all avaiable sinus types and exit
+  -output OUTPUT_FILE   name of binary output file without its suffix
+  -min MINIMUM_VALUE    minimum value (0-65535)
+  -max MAXIMUM_VALUE    maximum value (0-65535)
+  -steps STEPS          amount of bytes to generate, values below 5 cause an error with some sinus-types
+  -type TYPE            sinus type, see output of --list
+  -invert               invert values
+  -offset OFFSET        step offset, where to begin
+  -mod MODULO           modulo value
 
 Note: All values of a config-file can be overwritten by commandline parameters.
 
 Examples:
-    ./sinusgen.py -cfg sinus1.json -show
-    ./sinusgen.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8
-    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 -show
+    ./sinusgen.py -cfg sinus1.json --show
+    ./sinusgen.py -output datafile -min 0 -max 255 -steps 256 -type 1 -invert -offset 20 -mod 8 -previewfile sinus.png
+    ./sinusgen.py -cfg sinus1.json -max 255 -type 10 --show
+
+
 
 
 Available sinus types:
